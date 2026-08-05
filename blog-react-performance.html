@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimizing React App Performance — Nitin Khalasi</title>
+<meta name="description" content="Optimizing React App Performance — a post by Nitin Khalasi.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="alternate icon" href="assets/images/favicon.svg">
+
+<link rel="canonical" href="https://nitinkhalasi.great-site.net/blog-react-performance.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Optimizing React App Performance — Nitin Khalasi">
+<meta property="og:description" content="Optimizing React App Performance — a post by Nitin Khalasi.">
+<meta property="og:image" content="https://nitinkhalasi.great-site.net/assets/images/portfolio/hero-bg.png">
+<meta property="og:url" content="https://nitinkhalasi.great-site.net/blog-react-performance.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Optimizing React App Performance — Nitin Khalasi">
+<meta name="twitter:description" content="Optimizing React App Performance — a post by Nitin Khalasi.">
+<meta name="twitter:image" content="https://nitinkhalasi.great-site.net/assets/images/portfolio/hero-bg.png">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>Nitin<span style="color:var(--violet)">Khalasi</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-outline">Hire me</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="page-title">
+  <div class="container">
+    <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Performance</div>
+    <h1>Optimizing React App Performance</h1>
+    <p>Nitin Khalasi &middot; February 2026 &middot; 6 min read</p>
+  </div>
+</div>
+<section>
+  <div class="container post-wrap">
+    <article class="post-body" data-aos="fade-up">
+      <img src="assets/images/blog/react-performance.jpg" alt="Performance" style="width:100%;border-radius:var(--radius);margin-bottom:26px;">
+      <p>Most "slow React app" complaints trace back to a handful of repeat offenders. Before reaching for exotic optimizations, I work through the same short list on every client project.</p>
+      <h2>1. Find the real bottleneck first</h2>
+      <p>The React DevTools Profiler shows exactly which components re-render and why. Guessing at performance fixes without profiling usually means optimizing the wrong thing.</p>
+      <h2>2. Stop unnecessary re-renders</h2>
+      <p><code>React.memo</code>, <code>useMemo</code> and <code>useCallback</code> help, but only when a component is actually re-rendering for the wrong reason. Overusing them adds complexity without benefit.</p>
+      <ul>
+        <li>Split large components so state changes don't cascade everywhere</li>
+        <li>Keep expensive calculations out of the render path</li>
+        <li>Virtualize long lists instead of rendering hundreds of DOM nodes</li>
+      </ul>
+      <h2>3. Code-split and lazy-load</h2>
+      <p><code>React.lazy</code> with route-based splitting keeps the initial bundle small, so the app becomes interactive faster on the first load.</p>
+      <h2>4. Watch the network tab, not just the JS</h2>
+      <p>Unoptimized images and uncached API calls slow an app down just as much as bad render logic. Performance work has to cover both.</p>
+      <div class="post-tags">
+        <span class="chip">React</span>
+        <span class="chip">Performance</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Frontend Tips</span>
+      </div>
+    </article>
+    <aside>
+      <div class="side-widget" data-aos="fade-up">
+        <h4>About the author</h4>
+        <div class="author-card">
+          <div class="avatar-mark">NK</div>
+          <div><h5>Nitin Khalasi</h5><span>Frontend &amp; WordPress Developer</span></div>
+        </div>
+      </div>
+      <div class="side-widget" data-aos="fade-up" data-aos-delay="80">
+        <h4>More posts</h4>
+        <ol>
+          <li><a href="blog-responsive-design.html">How to Build Fully Responsive Websites<span>Jan 2026</span></a></li><li><a href="blog-modern-ui.html">Modern UI Design Best Practices<span>Mar 2026</span></a></li>
+        </ol>
+      </div>
+      <div class="side-widget" data-aos="fade-up" data-aos-delay="160">
+        <h4>Need this on your site?</h4>
+        <p style="font-size:13.5px;">I build responsive websites end to end — design handoff to launch.</p>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start a project</a>
+      </div>
+    </aside>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">nitin<span style="color:var(--violet)">.dev</span> <span>— built with HTML, CSS &amp; a lot of coffee</span></div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/nitin-khalasi-9b4318108/" target="_blank"><i class="icon" data-icon="linkedin"></i></a> <!-- TODO: replace with your real LinkedIn URL -->
+      <a href="https://wa.me/918140576016" target="_blank"><i class="icon" data-icon="whatsapp"></i></a>
+    </div>
+    <div class="footer-note">&copy; 2026 Nitin Khalasi</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918140576016" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><i class="icon" data-icon="whatsapp"></i></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

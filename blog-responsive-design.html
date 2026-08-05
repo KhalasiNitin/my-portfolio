@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Build Fully Responsive Websites — Nitin Khalasi</title>
+<meta name="description" content="How to Build Fully Responsive Websites — a post by Nitin Khalasi.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="alternate icon" href="assets/images/favicon.svg">
+
+<link rel="canonical" href="https://nitinkhalasi.great-site.net/blog-responsive-design.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Build Fully Responsive Websites — Nitin Khalasi">
+<meta property="og:description" content="How to Build Fully Responsive Websites — a post by Nitin Khalasi.">
+<meta property="og:image" content="https://nitinkhalasi.great-site.net/assets/images/portfolio/hero-bg.png">
+<meta property="og:url" content="https://nitinkhalasi.great-site.net/blog-responsive-design.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Build Fully Responsive Websites — Nitin Khalasi">
+<meta name="twitter:description" content="How to Build Fully Responsive Websites — a post by Nitin Khalasi.">
+<meta name="twitter:image" content="https://nitinkhalasi.great-site.net/assets/images/portfolio/hero-bg.png">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>Nitin<span style="color:var(--violet)">Khalasi</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-outline">Hire me</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+<div class="page-title">
+  <div class="container">
+    <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Responsive Design</div>
+    <h1>How to Build Fully Responsive Websites</h1>
+    <p>Nitin Khalasi &middot; January 2026 &middot; 5 min read</p>
+  </div>
+</div>
+<section>
+  <div class="container post-wrap">
+    <article class="post-body" data-aos="fade-up">
+      <img src="assets/images/blog/responsive-design.jpg" alt="Responsive Design" style="width:100%;border-radius:var(--radius);margin-bottom:26px;">
+      <p>"Responsive" gets treated like a checkbox — add a few media queries, shrink the font size on mobile, ship it. In practice, a layout that actually holds up across screen sizes needs a plan before you write any CSS. Here's the approach I use on client projects.</p>
+      <h2>1. Start from a fluid grid, not fixed breakpoints</h2>
+      <p>CSS Grid and Flexbox let you describe how space should be shared, not just how it should be split at specific widths. A row built with <code>display: flex; flex-wrap: wrap;</code> and percentage or <code>minmax()</code> based widths will often adapt on its own, long before you need a media query to rescue it.</p>
+      <h2>2. Use media queries to adjust the plan, not patch it</h2>
+      <p>Breakpoints should follow your content, not a list of device widths. I usually check where a layout starts to feel cramped and set a breakpoint there instead of guessing at 768px or 1024px because "that's standard."</p>
+      <ul>
+        <li>Design mobile-first, then add complexity as space allows</li>
+        <li>Keep touch targets at least 44px tall on small screens</li>
+        <li>Test real content, not lorem ipsum — long names and titles break layouts differently</li>
+      </ul>
+      <h2>3. Images and type need to scale too</h2>
+      <p>A responsive layout with a fixed 40px heading on mobile still feels broken. I lean on <code>clamp()</code> for type sizing and set images to <code>max-width: 100%; height: auto;</code> by default so nothing overflows its container.</p>
+      <h2>4. Test on the devices your users actually have</h2>
+      <p>Browser dev tools are a good first pass, but they don't catch everything. Before I hand a project off, I check it on at least one real phone and one real tablet.</p>
+      <div class="post-tags">
+        <span class="chip">Responsive Design</span>
+        <span class="chip">CSS Grid</span>
+        <span class="chip">Flexbox</span>
+        <span class="chip">Frontend Tips</span>
+      </div>
+    </article>
+    <aside>
+      <div class="side-widget" data-aos="fade-up">
+        <h4>About the author</h4>
+        <div class="author-card">
+          <div class="avatar-mark">NK</div>
+          <div><h5>Nitin Khalasi</h5><span>Frontend &amp; WordPress Developer</span></div>
+        </div>
+      </div>
+      <div class="side-widget" data-aos="fade-up" data-aos-delay="80">
+        <h4>More posts</h4>
+        <ol>
+          <li><a href="blog-react-performance.html">Optimizing React App Performance<span>Feb 2026</span></a></li><li><a href="blog-modern-ui.html">Modern UI Design Best Practices<span>Mar 2026</span></a></li>
+        </ol>
+      </div>
+      <div class="side-widget" data-aos="fade-up" data-aos-delay="160">
+        <h4>Need this on your site?</h4>
+        <p style="font-size:13.5px;">I build responsive websites end to end — design handoff to launch.</p>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start a project</a>
+      </div>
+    </aside>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">nitin<span style="color:var(--violet)">.dev</span> <span>— built with HTML, CSS &amp; a lot of coffee</span></div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/nitin-khalasi-9b4318108/" target="_blank"><i class="icon" data-icon="linkedin"></i></a> <!-- TODO: replace with your real LinkedIn URL -->
+      <a href="https://wa.me/918140576016" target="_blank"><i class="icon" data-icon="whatsapp"></i></a>
+    </div>
+    <div class="footer-note">&copy; 2026 Nitin Khalasi</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918140576016" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><i class="icon" data-icon="whatsapp"></i></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
